@@ -12,7 +12,7 @@ const Profile = () => {
       {/* Encabezado */}
       <div className="bg-[#1E40AF] h-24 flex justify-center items-center">
         <img
-          src={session.user.image || "/default-avatar.png"}
+          src={session.user.image as string}
           alt="Profile"
           className="w-24 h-24 rounded-full border-4 border-white -mb-12"
         />
