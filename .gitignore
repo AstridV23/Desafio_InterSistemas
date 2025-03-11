@@ -6,9 +6,4 @@ backend/node_modules/
 frontend/.env
 backend/.env
 
-# Ignorar caché de compilación y otros archivos innecesarios
-frontend/dist/
-backend/dist/
-frontend/build/
-backend/build/
 

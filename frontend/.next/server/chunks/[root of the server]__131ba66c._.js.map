@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 140, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/astri/Desktop/Desafio%20InterSistemas/frontend/src/app/api/auth/%5B...nextauth%5D/route.ts"],"sourcesContent":["import NextAuth from \"next-auth\";\r\nimport Providers from \"next-auth/providers/google\";\r\n\r\n// Nos permite comunicarnos con los servicios de Google\r\nconst handler = NextAuth({\r\n    providers: [ Providers({\r\n        clientId: process.env.GOOGLE_CLIENT_ID as string,\r\n        clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,\r\n    })],\r\n});\r\n\r\nexport {handler as GET, handler as POST};"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEA,uDAAuD;AACvD,MAAM,UAAU,CAAA,GAAA,uIAAA,CAAA,UAAQ,AAAD,EAAE;IACrB,WAAW;QAAE,CAAA,GAAA,qJAAA,CAAA,UAAS,AAAD,EAAE;YACnB,UAAU,QAAQ,GAAG,CAAC,gBAAgB;YACtC,cAAc,QAAQ,GAAG,CAAC,oBAAoB;QAClD;KAAG;AACP","debugId":null}},
+    {"offset": {"line": 158, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
