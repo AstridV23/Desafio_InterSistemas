@@ -17,10 +17,16 @@ function Navbar() {
 
             {session?.user ? (
                 <div className="flex items-center gap-x-5">
+                    
+                    <Link href={ '/table' }>
+                        Users
+                    </Link>
+                    
                     <Link href={ '/dashboard' }>
                         Dashboard
                     </Link>
-                    <p>{session.user.name} {session.user.email}</p>
+                    
+                    <p>{session.user.name}</p>
                     <img 
                         src= {session.user.image as string} 
                         alt="" 
