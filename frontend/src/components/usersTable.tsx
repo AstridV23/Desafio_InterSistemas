@@ -18,35 +18,38 @@ const ListaDeUsuarios: React.FC = () => {
   ];
 
   return (
-    <div>
-      <h1>Lista de Peticiones</h1>
-      <table className="table-auto border-collapse border border-gray-200">
-        <thead>
-          <tr>
-            <th className="px-4 py-2 border">Nombre</th>
-            <th className="px-4 py-2 border">Apellido</th>
-            <th className="px-4 py-2 border">Correo</th>
-            <th className="px-4 py-2 border">CUIL</th>
-            <th className="px-4 py-2 border">Fecha de Realización</th>
-            <th className="px-4 py-2 border">Resultados</th>
-          </tr>
-        </thead>
-        <tbody>
-          {usuarios.map((usuario, index) => (
-            <tr key={index}>
-              <td className="px-4 py-2 border">{usuario.nombre}</td>
-              <td className="px-4 py-2 border">{usuario.apellido}</td>
-              <td className="px-4 py-2 border">{usuario.correo}</td>
-              <td className="px-4 py-2 border">{usuario.cuil}</td>
-              <td className="px-4 py-2 border">{usuario.fechaRealizacion}</td>
-              <td className="px-4 py-2 border">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded">Editar</button>
-                <button className="bg-red-500 text-white px-4 py-2 rounded ml-2">Eliminar</button>
-              </td>
+    <div className='p-16 h-screen bg-gray-100'>
+      <h1 className='text-xl font-bold text-center mb-4'>Lista de Peticiones</h1>
+      
+      <div className='overflow-auto rounded-lg shadow'>
+        <table className="w-full">
+          <thead className='bg-gray-50 border-b-2 border-gray-200'>
+            <tr>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Nombre</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Apellido</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Correo</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">CUIL</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Fecha de Realización</th>
+              <th className="p-3 text-sm font-semibold tracking-wide text-left">Resultados</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className='divide-y divide-gray-100'>
+            {usuarios.map((usuario, index) => (
+              <tr key={index}>
+                <td className="p-3 text-sm text-gray-700 whitespace-nowrap">{usuario.nombre}</td>
+                <td className="p-3 text-sm text-gray-700 whitespace-nowrap">{usuario.apellido}</td>
+                <td className="p-3 text-sm text-gray-700 whitespace-nowrap">{usuario.correo}</td>
+                <td className="p-3 text-sm text-gray-700 whitespace-nowrap">{usuario.cuil}</td>
+                <td className="p-3 text-sm text-gray-700 whitespace-nowrap">{usuario.fechaRealizacion}</td>
+                <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                  <button className="bg-blue-400 text-sm font-semibold tracking-wide text-left-white p-3 textd rounded-lg bg-opacity-50 cursor-pointer">Descargar</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    
     </div>
   );
 };

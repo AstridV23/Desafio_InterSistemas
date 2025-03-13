@@ -19,11 +19,11 @@ function Navbar() {
                 <div className="flex items-center gap-x-5">
                     
                     <Link href={ '/table' }>
-                        Users
+                        Usuarios
                     </Link>
                     
                     <Link href={ '/dashboard' }>
-                        Dashboard
+                        Panel
                     </Link>
                     
                     <p>{session.user.name}</p>
@@ -41,7 +41,7 @@ function Navbar() {
                         }}
                         className="bg-sky-400 px-3 py-2 rounded cursor-pointer"
                     >
-                        Logout
+                        Cerrar sesion
                     </button>
 
                     <Link href={ '/profile' }>
@@ -51,10 +51,14 @@ function Navbar() {
                 </div>
             ): (
                 <button 
-                    onClick={() => signIn()} 
+                    onClick={ async () => {
+                        await signIn("google", {
+                            callbackUrl: '/dashboard'
+                        });
+                    }}
                     className="bg-sky-400 px-3 py-2 rounded cursor-pointer"
                 >
-                    Sign In
+                    Iniciar Sesion
                 </button>
             )}
         </nav>

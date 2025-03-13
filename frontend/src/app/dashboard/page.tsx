@@ -10,7 +10,7 @@ function DashboardPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center mt-6">Dashboard</h1>
+      <h1 className="text-3xl font-bold text-center mt-6">Panel Principal</h1>
       <CuilForm onSubmit={handleCuilSubmit} />
     </div>
   );

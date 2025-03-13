@@ -38,7 +38,7 @@ const CuilForm: React.FC<CuilFormProps> = ({ onSubmit }) => {
           placeholder="20-12345678-9"
         />
         {error && <p className="text-red-500">{error}</p>}
-        <button type="submit" className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
+        <button type="submit" className="mt-4 bg-blue-500 text-white py-2 px-4 rounded cursor-pointer">
           Enviar
         </button>
       </form>

@@ -71,7 +71,7 @@ function Navbar() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: '/table',
-                        children: "Users"
+                        children: "Usuarios"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.tsx",
                         lineNumber: 21,
@@ -79,7 +79,7 @@ function Navbar() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: '/dashboard',
-                        children: "Dashboard"
+                        children: "Panel"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.tsx",
                         lineNumber: 25,
@@ -108,7 +108,7 @@ function Navbar() {
                             });
                         },
                         className: "bg-sky-400 px-3 py-2 rounded cursor-pointer",
-                        children: "Logout"
+                        children: "Cerrar sesion"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.tsx",
                         lineNumber: 36,
@@ -128,9 +128,13 @@ function Navbar() {
                 lineNumber: 19,
                 columnNumber: 17
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                onClick: ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signIn"])(),
+                onClick: async ()=>{
+                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signIn"])("google", {
+                        callbackUrl: '/dashboard'
+                    });
+                },
                 className: "bg-sky-400 px-3 py-2 rounded cursor-pointer",
-                children: "Sign In"
+                children: "Iniciar Sesion"
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.tsx",
                 lineNumber: 53,
